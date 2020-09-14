@@ -1,6 +1,0 @@
-{
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.envFile": "${workspaceRoot}/env",
-    "python.pythonPath": "env\\Scripts\\python.exe"
-}
