@@ -1,8 +1,9 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
     "python.linting.pylintArgs": ["--generate-members"],
-    "python.envFile": "${workspaceRoot}/env",
+    "python.envFile": "${workspaceRoot}\\env",
     "python.pythonPath": "env\\Scripts\\python.exe",
     "python.autoComplete.addBrackets": true,
     "git.ignoreLimitWarning": true,
