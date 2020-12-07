@@ -11,5 +11,6 @@
         "keras",
         "ndarray",
         "numpy"
-    ]
+    ],
+    "python.analysis.completeFunctionParens": true
 }
