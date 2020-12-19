@@ -36,7 +36,7 @@ export class TeamMemberCardComponent implements OnInit {
     // alert copy
     this.copyStatus = 'Copied To Clipboard';
 
-    setTimeout(() => {                           //<<<---using ()=> syntax
+    setTimeout(() => {
       this.copyStatus = 'Copy';
     }, 1000);
   }

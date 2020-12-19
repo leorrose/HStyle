@@ -10,6 +10,11 @@ import { AboutComponent } from './about/about.component';
 import { TeamMemberCardComponent } from './team-member-card/team-member-card.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoComponent } from './demo/demo.component';
+import { SingleImageUploaderComponent } from './single-image-uploader/single-image-uploader.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +24,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HistoricalStyleGeneratorComponent,
     AboutComponent,
     TeamMemberCardComponent,
-    TeamMembersComponent
+    TeamMembersComponent,
+    DemoComponent,
+    SingleImageUploaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    BrowserAnimationsModule,
+    NgbModule,
+    NgxDropzoneModule
   ],
   providers: [],
   bootstrap: [AppComponent]
