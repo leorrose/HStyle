@@ -1,0 +1,75 @@
+<div class="historical-style-generator m-0">
+  <div class="jumbotron text-center bg-light">
+    <div class="container">
+      <p class="lead bold text-muted font-weight-bold pl-5 pr-5 mb-5">Fill the following fields to generate a synthetic image</p>
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-12">
+          <form>
+            <div class="form-group row">
+              <label for="styleLoss" class="col-sm-6 col-form-label">Style Loss</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="styleLoss" [placeholder]="styleLoss" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="contentLoss" class="col-sm-6 col-form-label">Content Loss (between {{contentLossInputMin}}-{{contentLossInputMax}})</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="contentLoss" [min]="contentLossInputMin" [max]="contentLossInputMax"
+                step="100" placeholder="Content Loss" [(ngModel)]="contentLossInput" name="contentLossInput">
+                <p *ngIf="contentLossInputWarning" class="text-danger text-left">{{contentLossInputWarning}}</p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="totalVariationLoss" class="col-sm-6 col-form-label">Total Variation Loss</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="totalVariationLoss" [placeholder]="totalVariationLoss" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="applyDilation" class="col-sm-6 col-form-label">Add dilation?</label>
+              <div class="col-sm-4">
+                <button *ngIf="addDilation" type="button" class="btn btn-block btn-dark" (click)="toggleDilation()" id="applyDilation">Yes</button>
+                <button *ngIf="!addDilation" type="button" class="btn btn-block btn-outline-dark" (click)="toggleDilation()" id="applyDilation">No</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-12">
+          <p class="lead text-muted pl-5 pr-5 mt-5 mb-0">Drop content image or leave empty for default image</p>
+        </div>
+        <div class="col-12">
+          <p class="lead text-muted pl-5 pr-5 mt-0 text-small">(content image must be text with white background)</p>
+        </div>
+      </div>
+
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-lg-7">
+          <app-single-image-uploader (imageContent)="setContentImage($event)" dropZoneText="Drop Image"></app-single-image-uploader>
+        </div>
+      </div>
+
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-12">
+          <p class="lead text-muted pl-5 pr-5 mt-5 mb-0">Drop style image or leave empty for default image</p>
+        </div>
+        <div class="col-12">
+          <p class="lead text-muted pl-5 pr-5 mt-0 text-small">(Historical document image)</p>
+        </div>
+      </div>
+
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-lg-7">
+          <app-single-image-uploader (imageContent)="setStyleImage($event)" dropZoneText="Drop Image"></app-single-image-uploader>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-dark pl-5 pr-5 mt-5" (click)="generateImage()">Generate Image</button>
+    </div>
+  </div>
+</div>
+
+
+

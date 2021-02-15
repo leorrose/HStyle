@@ -1,22 +1,19 @@
-import os
-from fastapi import FastAPI, Request
-from controllers import todo, auth
+from typing import List
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
+from starlette.responses import RedirectResponse
+from controllers import style_transfer
 
+# define our fastapi
+app: FastAPI = FastAPI()
 
-angular_project_folder = f"{os.path.dirname(__file__)}/../../client/angular/dist/angular/"
-
-app = FastAPI()
-
-origins = [
+# define origins that can call our api
+origins: List[str] = [
     "*",
-    "http://localhost",
-    "http://localhost:4200",
+    "http://localhost:4200"
 ]
 
+# add our origins to allow CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -25,13 +22,17 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+# on app open redirect to docs
+@app.get("/")
+async def root() -> RedirectResponse:
+    """
+    Get the initial wep api page (doc page)
 
-@app.get("/", response_class=HTMLResponse)
-async def root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    Returns:
+       RedirectResponse: redirect to doc page
+    """
+    response: RedirectResponse = RedirectResponse(url='/docs')
+    return response
 
-
-templates = Jinja2Templates(directory=angular_project_folder)
-app.mount("/static", StaticFiles(directory=angular_project_folder), name="static")
-app.include_router(todo.router, prefix="/api/todo", tags=["todo"])
-app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
+# add our style transfer end points
+app.include_router(style_transfer.router, prefix="/styleTransfer", tags=["styleTransfer"])
