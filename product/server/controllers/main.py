@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
 from controllers import style_transfer
 
+
 # define our fastapi
 app: FastAPI = FastAPI()
 
@@ -13,6 +14,7 @@ origins: List[str] = [
     "http://localhost:4200"
 ]
 
+
 # add our origins to allow CORS
 app.add_middleware(
     CORSMiddleware,
@@ -21,6 +23,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
 
 # on app open redirect to docs
 @app.get("/")
@@ -35,4 +38,5 @@ async def root() -> RedirectResponse:
     return response
 
 # add our style transfer end points
-app.include_router(style_transfer.router, prefix="/styleTransfer", tags=["styleTransfer"])
+app.include_router(style_transfer.router, prefix="/styleTransfer",
+                   tags=["styleTransfer"])
