@@ -2,7 +2,7 @@
 FROM tensorflow/tensorflow:latest-gpu
 
 # set the working directory in the container
-WORKDIR /backend
+WORKDIR /server
 
 # copy files to the working directory
 COPY . .
@@ -16,4 +16,4 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN python -m pip install -r requirements.txt
 
 # command to run on container start
-CMD [ "python", "server.py"]
+CMD [ "python", "controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]

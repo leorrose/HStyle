@@ -1,17 +1,23 @@
+"""
+Main api controller for HStyle api. responsable to create the fast api
+app, configuring it and adding all other api that exist.
+"""
+
+
 from typing import List
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
-from controllers import style_transfer
+from controllers import style_transfer # pylint: disable=E0401
 
 
-# define our fastapi
+# create a fastapi app
 app: FastAPI = FastAPI()
 
 # define origins that can call our api
 origins: List[str] = [
+    "http://localhost:4200",
     "*",
-    "http://localhost:4200"
 ]
 
 
@@ -25,8 +31,8 @@ app.add_middleware(
 )
 
 
-# on app open redirect to docs
-@app.get("/")
+# redirect to docs when getting root of app
+@app.get("/", include_in_schema=False)
 async def root() -> RedirectResponse:
     """
     Get the initial wep api page (doc page)
@@ -37,6 +43,6 @@ async def root() -> RedirectResponse:
     response: RedirectResponse = RedirectResponse(url='/docs')
     return response
 
-# add our style transfer end points
+# add our style transfer api
 app.include_router(style_transfer.router, prefix="/styleTransfer",
                    tags=["styleTransfer"])

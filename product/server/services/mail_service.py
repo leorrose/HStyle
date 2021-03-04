@@ -1,7 +1,9 @@
+"""
+Email service responsable for all email services through the application.
+"""
+
+
 import smtplib
-import numpy as np
-import base64
-import cv2
 import io
 from pydantic import EmailStr
 from PIL import Image

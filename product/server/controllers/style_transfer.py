@@ -1,7 +1,13 @@
+"""
+Style transfer api controller for HStyle api. responsable for the style
+transfer end point and applying the style transfer.
+"""
+
+
 import cv2
 import numpy as np
-from machine_learning import style_transfer
-from services import mail_service
+from machine_learning import style_transfer # pylint: disable=E0401
+from services import mail_service # pylint: disable=E0401
 from typing import List
 from pydantic import EmailStr
 from fastapi import (APIRouter, UploadFile, File, Query, HTTPException,
@@ -40,11 +46,13 @@ total_variation_max_weight: float = 30.0
 total_variation_min_weight: float = 30.0
 
 # deafult content image
-content_img_deafult: np.ndarray = np.asarray(Image.open(''))
+content_img_deafult: np.ndarray = np.asarray(
+    Image.open('./../../partial_data_set/modern_hebrew/1.png'))
 # deafult style image
-style_img_deafult: np.ndarray = np.asarray(Image.open(''))
+style_img_deafult: np.ndarray = np.asarray(
+    Image.open('./../../partial_data_set/hebrew_middle_ages/1.png'))
 
-# create our router to end points
+# create our router to style transfer api
 router: APIRouter = APIRouter()
 
 
@@ -71,11 +79,11 @@ async def read_image_from_api(api_img: UploadFile) -> np.ndarray:
         # transform BGR to RGB
         img: np.ndarray = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         return img
-    except Exception:
+    except Exception as err:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Unable to process image file"
-        )
+        ) from err
 
 
 def render_image(email: EmailStr, content_loss: float, style_loss: float,
@@ -121,7 +129,7 @@ async def render(background_tasks: BackgroundTasks, email: EmailStr,
     """
     End point for using the style transfer model in order to render a content
     image with the style of style image.
-
+    \f
     Args:
         email(EmailStr): email to send to user
         content_loss (float): the content loss weight for style transfer model
@@ -138,14 +146,14 @@ async def render(background_tasks: BackgroundTasks, email: EmailStr,
 
     # test content image was provided and its type
     if content_image is not None:
-        content_img: np.ndarray = read_image_from_api(content_image)
+        content_img: np.ndarray = await read_image_from_api(content_image)
     # apply deafault content image
     else:
         content_img: np.ndarray = content_img_deafult.copy()
 
     # test style image was provided and its type
     if style_image is not None:
-        style_img: np.ndarray = read_image_from_api(style_image)
+        style_img: np.ndarray = await read_image_from_api(style_image)
     # apply deafault style image
     else:
         style_img: np.ndarray = style_img_deafult.copy()

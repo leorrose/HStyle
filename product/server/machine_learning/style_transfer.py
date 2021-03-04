@@ -1,4 +1,9 @@
 
+"""
+Style transfer model
+"""
+
+
 import numpy as np
 import tensorflow as tf
 from typing import List, Dict, Tuple
@@ -108,7 +113,10 @@ def gram_matrix(input_tensor: tf.Tensor) -> tf.Tensor:
     return result/(num_locations)
 
 
-class StyleContentModel(tf.keras.models.Model):
+class StyleContentModel(tf.keras.models.Model): # pylint: disable=W0223
+    """
+    Class to get the content and style from model
+    """
     def __init__(self, style_layers: List[str], content_layers: List[str]):
         """
         Initialization Method
@@ -125,7 +133,7 @@ class StyleContentModel(tf.keras.models.Model):
         self.num_style_layers: int = len(style_layers)
         self.content_layers: List[str] = content_layers
 
-    def call(self, inputs: tf.Tensor) -> Dict[str, tf.Tensor]:
+    def call(self, inputs: tf.Tensor) -> Dict[str, tf.Tensor]: # pylint: disable=W0221
         """
         Method to overide call operation to enable creation of gram matrix
         and content
@@ -158,12 +166,12 @@ class StyleContentModel(tf.keras.models.Model):
 
         # create dict where key is layer name and value is output
         content_dict = {content_name: value
-                        for content_name, value
+                        for content_name, value # pylint: disable=R1721
                         in zip(self.content_layers, content_outputs)}
 
         # create dict where key is layer name and value is output
         style_dict = {style_name: value
-                      for style_name, value
+                      for style_name, value # pylint: disable=R1721
                       in zip(self.style_layers, style_outputs)}
 
         return {'content': content_dict, 'style': style_dict}
