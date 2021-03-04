@@ -44,5 +44,5 @@ async def root() -> RedirectResponse:
     return response
 
 # add our style transfer api
-app.include_router(style_transfer.router, prefix="/styleTransfer",
+app.include_router(style_transfer.router, prefix="/api/styleTransfer",
                    tags=["styleTransfer"])

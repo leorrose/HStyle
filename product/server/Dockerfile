@@ -16,4 +16,4 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN python -m pip install -r requirements.txt
 
 # command to run on container start
-CMD [ "python", "controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]
+CMD [ "uvicorn", "controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]
