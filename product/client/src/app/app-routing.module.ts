@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: AboutComponent},
-  { path: 'about', component: AboutComponent},
-  { path: 'get-started', component: HistoricalStyleGeneratorComponent}
+    { path: '', component: AboutComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'get-started', component: HistoricalStyleGeneratorComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

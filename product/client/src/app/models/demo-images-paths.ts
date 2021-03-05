@@ -1,5 +1,5 @@
 export interface DemoImagesPaths {
-  contentImage: string;
-  styleImage: string;
-  resultImage: string;
+    contentImage: string;
+    styleImage: string;
+    resultImage: string;
 }
