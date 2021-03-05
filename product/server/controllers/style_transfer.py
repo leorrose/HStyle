@@ -10,7 +10,7 @@ from machine_learning import style_transfer # pylint: disable=E0401
 from services import mail_service # pylint: disable=E0401
 from typing import List
 from pydantic import EmailStr
-from fastapi import (APIRouter, UploadFile, File, Query, HTTPException,
+from fastapi import (APIRouter, UploadFile, File, Body, HTTPException,
                      status, BackgroundTasks)
 from starlette.responses import Response
 from PIL import Image
@@ -114,16 +114,17 @@ def render_image(email: EmailStr, content_loss: float, style_loss: float,
     mail_service.send_image_by_email(result, msg, email)
 
 
-@router.post("/render/")
-async def render(background_tasks: BackgroundTasks, email: EmailStr,
-                 content_loss: float = Query(..., ge=content_min_weight,
+@router.post("/renderImage/")
+async def render_image(background_tasks: BackgroundTasks, 
+                 email: EmailStr = Body(...),
+                 content_loss: float = Body(..., ge=content_min_weight,
                                              le=content_max_weight),
-                 style_loss: float = Query(..., ge=style_min_weight,
+                 style_loss: float = Body(..., ge=style_min_weight,
                                            le=style_max_weight),
-                 total_variation_loss: float = Query(
+                 total_variation_loss: float = Body(
                      ..., ge=total_variation_min_weight,
                      le=total_variation_max_weight),
-                 apply_dilation: bool = Query(...),
+                 apply_dilation: bool = Body(...),
                  content_image: UploadFile = File(None),
                  style_image: UploadFile = File(None)) -> Response:
     """
@@ -164,7 +165,7 @@ async def render(background_tasks: BackgroundTasks, email: EmailStr,
         content_img: np.ndarray = cv2.erode(content_img, kernel, iterations=1)
 
     # run model + email send in background
-    background_tasks.add_task(render_image, email, content_loss, style_loss,
-                              total_variation_loss, content_img, style_img)
+    #background_tasks.add_task(render_image, email, content_loss, style_loss,
+    #                          total_variation_loss, content_img, style_img)
 
     return Response(status_code=status.HTTP_200_OK)
