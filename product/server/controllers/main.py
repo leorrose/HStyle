@@ -16,7 +16,6 @@ app: FastAPI = FastAPI()
 
 # define origins that can call our api
 origins: List[str] = [
-    "http://localhost:4200",
     "*",
 ]
 
