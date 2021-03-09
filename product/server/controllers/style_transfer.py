@@ -165,7 +165,7 @@ async def render_image(background_tasks: BackgroundTasks,
         content_img: np.ndarray = cv2.erode(content_img, kernel, iterations=1)
 
     # run model + email send in background
-    #background_tasks.add_task(render_image, email, content_loss, style_loss,
-    #                          total_variation_loss, content_img, style_img)
+    background_tasks.add_task(render_image, email, content_loss, style_loss,
+                              total_variation_loss, content_img, style_img)
 
     return Response(status_code=status.HTTP_200_OK)

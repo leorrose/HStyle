@@ -14,9 +14,9 @@ export class DemoService {
      */
     getDemoImagesPaths(): DemoImagesPaths {
         const Paths: DemoImagesPaths = {
-            contentImage: 'assets/HStyle_demo/content.webp',
-            styleImage: 'assets/HStyle_demo/style.webp',
-            resultImage: 'assets/HStyle_demo/result.webp'
+            contentImage: 'assets/hstyle_demo/content.webp',
+            styleImage: 'assets/hstyle_demo/style.webp',
+            resultImage: 'assets/hstyle_demo/result.webp'
 
         };
         return Paths;
