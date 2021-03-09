@@ -1,0 +1,19 @@
+version: "3"
+services:
+  client:
+    build:
+      context: ./client
+    container_name: "client"
+    ports:
+      - "3000:3000"
+  server:
+    build:
+      context: ./server
+      args:
+        --gpu: all
+    container_name: "server"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - client
+    
