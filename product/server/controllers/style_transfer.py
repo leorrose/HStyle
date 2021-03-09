@@ -86,7 +86,7 @@ async def read_image_from_api(api_img: UploadFile) -> np.ndarray:
         ) from err
 
 
-def render_image(email: EmailStr, content_loss: float, style_loss: float,
+def render_image_background(email: EmailStr, content_loss: float, style_loss: float,
                  total_variation_loss: float, content_img: np.ndarray,
                  style_img: np.ndarray) -> None:
     """
@@ -165,7 +165,8 @@ async def render_image(background_tasks: BackgroundTasks,
         content_img: np.ndarray = cv2.erode(content_img, kernel, iterations=1)
 
     # run model + email send in background
-    background_tasks.add_task(render_image, email, content_loss, style_loss,
-                              total_variation_loss, content_img, style_img)
+    background_tasks.add_task(render_image_background, email, content_loss,
+                              style_loss, total_variation_loss, 
+                              content_img, style_img)
 
     return Response(status_code=status.HTTP_200_OK)
