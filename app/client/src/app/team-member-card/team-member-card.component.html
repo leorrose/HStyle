@@ -1,0 +1,14 @@
+<img *ngIf="teamMember.imagePath" class="rounded-circle" [src]="teamMember.imagePath" alt="Team Member Image"
+    width="140" height="140">
+<h3 *ngIf="teamMember.name">{{teamMember.name}}</h3>
+<p *ngIf="teamMember.description" class="text-muted">{{teamMember.description}}</p>
+<a *ngIf="teamMember.researchgateLink" class="btn btn-outline-dark mr-1" [href]="teamMember.researchgateLink"
+    role="button" target="_blank"><i class="fab fa-researchgate fa-lg"></i></a>
+<a *ngIf="teamMember.githubLink" class="btn btn-outline-dark mr-1" [href]="teamMember.githubLink" role="button"
+    target="_blank"><i class="fab fa-github-square fa-lg"></i></a>
+<a *ngIf="teamMember.linkedinLink" class="btn btn-outline-dark mr-1" [href]="teamMember.linkedinLink" role="button"
+    target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+<button *ngIf="teamMember.emailAddress" type="button" class="btn btn-outline-dark mr-1"
+    (click)="copyToClipBoard(teamMember.emailAddress)" ngbTooltip="Copied To Clipboard!" triggers="click:blur">
+    <i class="fas fa-envelope"></i>
+</button>

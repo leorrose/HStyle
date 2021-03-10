@@ -1,0 +1,18 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/* scroll bar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* scroll bar Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* scroll bar Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}

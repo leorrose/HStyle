@@ -1,0 +1,23 @@
+version: "2.3"
+services:
+  client:
+    build:
+      context: ./client/prod.dockerfile
+    container_name: client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./server
+    container_name: server
+    ports:
+      - "5000:5000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]

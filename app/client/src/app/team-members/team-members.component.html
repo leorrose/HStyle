@@ -1,0 +1,5 @@
+<div class="row" *ngFor="let teamMemberRow of teamMembers;">
+    <div class="col-lg-4 mb-4" *ngFor="let teamMember of teamMemberRow;">
+        <app-team-member-card *ngIf="teamMember" [teamMember]=teamMember> </app-team-member-card>
+    </div>
+</div>

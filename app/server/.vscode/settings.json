@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "D:\\projects\\HStyle\\product\\server\\env\\Scripts\\python.exe",
+    "editor.rulers": [80],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintArgs": ["--generate-members", "--extension-pkg-whitelist=cv2"],
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4  
+    }
+}
