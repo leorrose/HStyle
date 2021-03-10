@@ -2,7 +2,8 @@ version: "2.3"
 services:
   client:
     build:
-      context: ./client/local.dockerfile
+      context: ./client
+      dockerfile: local.dockerfile
     container_name: client
     ports:
       - "3000:3000"
