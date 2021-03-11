@@ -13,8 +13,11 @@ COPY . /usr/src/client
 # install node moudles
 RUN npm install
 
+# install anguar cli global
+RUN npm install -g @angular/cli
+
 # build angular project
-RUN npm run build
+RUN ng build
 
 # Stage 2 - nginx for serving
 FROM nginx:1.17.1-alpine
