@@ -12,9 +12,7 @@ COPY . /usr/src/client
 
 # install node moudles
 RUN npm install
-
-# install anguar cli global
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@11.2.2
 
 # build angular project
 RUN ng build --prod
