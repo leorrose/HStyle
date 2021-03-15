@@ -8,7 +8,8 @@ This Project was created with <b> Python, FastAPI, TensorFlow, Keras, OpenCV, An
 
 ## Project Research
 
-In order to understand the steps and what we did you are welcome to look at [the research jupyter notebook](https://github.com/leorrose/Image-classification-ZSL/blob/master/research_notebook.ipynb) and the project book that includes a more detailed 
+In order to understand the steps and what we did you are welcome to look at [the research jupyter notebook](https://github.com/leorrose/HStyle/blob/master/research/research_historical_style_generator.ipynb)
+and the [project book](https://github.com/leorrose/HStyle/blob/master/research/Project Book.pdf)
 
 ## Project Setup and Run:
 
