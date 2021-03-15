@@ -12,27 +12,23 @@ In order to understand the steps and what we did you are welcome to look at the 
 and the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/research/Project_Book.pdf).
 
 ## Project Setup and Run
-In order to run this project with docker your envirmont needs to supporrt TensorFlow Docker. you can follow this [**link**](https://www.tensorflow.org/install/docker) to get everthing set uped
+In order to run this project with docker your environment  needs to support  TensorFlow Docker. you can follow this [**link**](https://www.tensorflow.org/install/docker) to get everything set upped.
 
-### Run on local enviroment:
+### Run on local environment:
 1. Clone this repository.
 2. Open cmd/shell/terminal and go to application folder: `cd Hstyle/app`
-3. Run the docker-compose file: `docker-compuse -f docker-compose-local.yml up`
+3. Run the docker-compose file: `docker-compose -f docker-compose-local.yml up`
 4. Open this [link](http://localhost:3000/)
 5. Enjoy the application.
 
-### Run on production enviroment:
+### Run on production environment:
 1. Clone this repository.
 2. Open the following file: `Hstyle/app/client/src/environments/environment.prod.ts` 
-3. In the file opend in step 2 change the API_URL to 'http://PRODUCTION_IP_ADDRESS:5000' where PRODUCTION_IP_ADDRESS is your depoyment server IP adress.
+3. In the opened file from step 2 change the API_URL to 'http://PRODUCTION_IP_ADDRESS:5000' where PRODUCTION_IP_ADDRESS is your deployment server IP address.
 4. Open cmd/shell/terminal and go to application folder: `cd Hstyle/app`
-5. Run the docker-compose file: `docker-compuse -f docker-compose-prod.yml up``
-6. Open this link http://PRODUCTION_IP_ADDRESS:3000/ where PRODUCTION_IP_ADDRESS is your depoyment server IP adress.
+5. Run the docker-compose file: `docker-compose -f docker-compose-prod.yml up``
+6. Open this link http://PRODUCTION_IP_ADDRESS:3000/ where PRODUCTION_IP_ADDRESS is your deployment server IP address.
 7. Enjoy the application.
-
-Please let me know if you find bugs or something that needs to be fixed.
-
-Hope you enjoy.
 
 ## Demo:
 
