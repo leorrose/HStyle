@@ -34,6 +34,17 @@ Please let me know if you find bugs or something that needs to be fixed.
 
 Hope you enjoy.
 
+## Demo:
+
+
+## Examples:
+| Content Image             | Style Image               | Changes To Content Image  | Result                    |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+| ![content](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|![style](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)||![result](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|![style](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)||![result](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|![style](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)||![result](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|![style](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)||![result](https://github.com/leorrose/HStyle/blob/master/partial_data_set/hebrew_middle_ages/1.png)|
+
 ## Citations
 
 ```
