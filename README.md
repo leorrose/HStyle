@@ -8,7 +8,7 @@ This Project was created with **Python, FastAPI, TensorFlow, Keras, OpenCV, Angu
 
 ## Project Research
 
-In order to understand the steps and what we did you are welcome to look at the [**Research Jupyter Notebook**](https://github.com/leorrose/HStyle/blob/master/research/research_historical_style_generator.ipynb)
+In order to understand the steps and what we did you are welcome to look at the [**Research Jupyter Notebook**](https://github.com/leorrose/HStyle/blob/master/research/research_HStyle.ipynb)
 and the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/research/Project_Book.pdf).
 
 ## Project Setup and Run
