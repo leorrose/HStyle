@@ -38,8 +38,8 @@ Hope you enjoy.
 
 
 ## Examples:
-| Content Image             | Style Image               | Changes To Content Image  | Result                    |
-|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+| Content Image                   | Style Image                     | Changes To Content Image| Result             |
+|:-------------------------------:|:-------------------------------:|:----------:|:-------------------------------:|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/3/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/3/style.jpg)|Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/3/result.png)|
