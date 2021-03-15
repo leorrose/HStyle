@@ -49,7 +49,7 @@ Hope you enjoy.
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/7/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/7/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/7/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/8/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/8/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/8/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/9/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
-| ![content](https://github.com/leorrose/HStyle/blob/master/examples/10/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/10/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
 
 ## Citations
 
