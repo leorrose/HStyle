@@ -3,6 +3,7 @@ Tests for style transfer controller
 """
 
 
+import os
 import numpy as np
 from typing import Dict
 from fastapi.testclient import TestClient
@@ -11,6 +12,9 @@ from unittest import mock
 from unittest.mock import patch
 from requests import Response
 
+
+# get dir path
+dir_path: str = os.path.dirname(os.path.realpath(__file__))
 
 # create a client for testing
 client = TestClient(app)
@@ -57,10 +61,10 @@ def test_render_image_with_images(
     # Arrange
     files: Dict[str, tuple] = {
             "content_image": ("test_content_image",
-                               open('././data/modern.png', "rb"),
+                               open(dir_path + '/../../data/modern.png', "rb"),
                                "image/png"),
             "style_image": ("test_style_image",
-                             open('././data/historical.png', "rb"),
+                             open(dir_path + '/../../data/historical.png', "rb"),
                              "image/png")}
 
     data: Dict[str, str] = {"email": "test@test.com",
