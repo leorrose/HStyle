@@ -18,6 +18,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
-      working-directory: ./app/server
       run: |
-        pylint `ls -R|grep .py$|xargs`
+        pylint --path ./app/server `ls -R|grep .py$|xargs`
