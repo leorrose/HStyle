@@ -6,8 +6,8 @@ transfer end point and applying the style transfer.
 
 import cv2
 import numpy as np
-from machine_learning import style_transfer # pylint: disable=E0401
-from services import mail_service # pylint: disable=E0401
+from server.machine_learning import style_transfer
+from server.services import mail_service
 from typing import List
 from pydantic import EmailStr
 from fastapi import (APIRouter, UploadFile, File, Body, HTTPException,

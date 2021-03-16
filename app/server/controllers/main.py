@@ -8,7 +8,7 @@ from typing import List
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
-from controllers import style_transfer # pylint: disable=E0401
+from server.controllers import style_transfer
 
 
 # create a fastapi app
