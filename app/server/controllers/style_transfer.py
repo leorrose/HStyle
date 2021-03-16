@@ -51,10 +51,10 @@ total_variation_min_weight: float = 30.0
 
 # deafult content image
 content_img_deafult: np.ndarray = np.asarray(
-    Image.open(dir_path + './data/modern.png'))
+    Image.open(dir_path + '/./data/modern.png'))
 # deafult style image
 style_img_deafult: np.ndarray = np.asarray(
-    Image.open(dir_path + './data/historical.png'))
+    Image.open(dir_path + '/./data/historical.png'))
 
 # create our router to style transfer api
 router: APIRouter = APIRouter()
