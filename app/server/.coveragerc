@@ -1,0 +1,14 @@
+[run]
+source = .
+omit =
+    */machine_learning/*
+    */tests/*
+
+[report]
+fail_under=90
+skip_empty = True
+
+[html]
+directory = coverage_html_report
+skip_covered = True
+skip_empty = True

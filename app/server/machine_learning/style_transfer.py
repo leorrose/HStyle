@@ -31,7 +31,7 @@ def load_img(img: np.ndarray) -> tf.Tensor:
     long_dim: tf.Tensor = max(shape)
     # get the ratio scale to 512
     scale: tf.Tensor = max_dim / long_dim
-    # get the nex image shape by scale ratio
+    # get the new image shape by scale ratio
     new_shape: tf.Tensor = tf.cast(shape * scale, tf.int32)
     # resize image
     img: tf.Tensor = tf.image.resize(img, new_shape)

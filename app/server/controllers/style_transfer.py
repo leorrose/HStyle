@@ -73,7 +73,7 @@ async def read_image_from_api(api_img: UploadFile) -> np.ndarray:
         # read image as bytes/chars
         img: bytes = await api_img.read()
         # create numpy array from bytes
-        img: np.ndarray = np.fromstring(img, np.uint8)
+        img: np.ndarray = np.frombuffer(img, np.uint8)
         # create image from bytes
         img: np.ndarray = cv2.imdecode(img, cv2.IMREAD_COLOR)
         # transform BGR to RGB
@@ -115,7 +115,7 @@ def render_image_background(email: EmailStr, content_loss: float, style_loss: fl
 
 
 @router.post("/renderImage/")
-async def render_image(background_tasks: BackgroundTasks, 
+async def render_image(background_tasks: BackgroundTasks,
                  email: EmailStr = Body(...),
                  content_loss: float = Body(..., ge=content_min_weight,
                                              le=content_max_weight),
@@ -166,7 +166,7 @@ async def render_image(background_tasks: BackgroundTasks,
 
     # run model + email send in background
     background_tasks.add_task(render_image_background, email, content_loss,
-                              style_loss, total_variation_loss, 
+                              style_loss, total_variation_loss,
                               content_img, style_img)
 
     return Response(status_code=status.HTTP_200_OK)
