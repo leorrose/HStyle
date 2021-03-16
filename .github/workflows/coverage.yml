@@ -18,5 +18,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r ./app/server/requirements.txt
     - name: Run code coverage
+      working-directory: ./app/server
       run: |
         coverage run -m pytest
