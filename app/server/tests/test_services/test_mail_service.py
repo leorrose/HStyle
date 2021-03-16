@@ -5,7 +5,7 @@ Tests for mail service
 
 from PIL import Image
 from unittest import mock
-from services import mail_service
+from server.services import mail_service
 from unittest.mock import patch
 
 

@@ -4,7 +4,7 @@ Tests for main controller
 
 from requests import Response
 from fastapi.testclient import TestClient
-from controllers.main import app
+from server.controllers.main import app
 
 
 # create a client for testing

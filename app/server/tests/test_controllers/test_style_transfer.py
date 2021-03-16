@@ -6,7 +6,7 @@ Tests for style transfer controller
 import numpy as np
 from typing import Dict
 from fastapi.testclient import TestClient
-from controllers.main import app
+from server.controllers.main import app
 from unittest import mock
 from unittest.mock import patch
 from requests import Response
