@@ -16,7 +16,7 @@ from requests import Response
 client = TestClient(app)
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_without_images(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -44,7 +44,7 @@ def test_render_image_without_images(
     assert response.status_code == 200
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_with_images(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -79,7 +79,7 @@ def test_render_image_with_images(
     assert response.status_code == 200
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_with_wrong_images(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -112,7 +112,7 @@ def test_render_image_with_wrong_images(
     assert response.json()['detail'] == ('Unable to process image file')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_max_content_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -141,7 +141,7 @@ def test_render_image_wrong_max_content_loss(
                                                    ' 100000.0')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_min_content_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -170,7 +170,7 @@ def test_render_image_wrong_min_content_loss(
                                                    ' 10.0')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_max_style_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -199,7 +199,7 @@ def test_render_image_wrong_max_style_loss(
                                                    ' 0.01')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_min_style_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -228,7 +228,7 @@ def test_render_image_wrong_min_style_loss(
                                                    ' 0.01')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_max_total_variation_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -258,7 +258,7 @@ def test_render_image_wrong_max_total_variation_loss(
                                                    ' 30.0')
 
 
-@patch('controllers.style_transfer.render_image_background')
+@patch('server.controllers.style_transfer.render_image_background')
 def test_render_image_wrong_min_total_variation_loss(
     mock_render_image_background: mock.MagicMock) -> None:
     """
@@ -287,8 +287,8 @@ def test_render_image_wrong_min_total_variation_loss(
                                                    ' 30.0')
 
 
-@patch('services.mail_service.send_image_by_email')
-@patch('machine_learning.style_transfer.render_image')
+@patch('server.services.mail_service.send_image_by_email')
+@patch('server.machine_learning.style_transfer.render_image')
 def test_render_render_image_background(
     mock_render_image: mock.MagicMock,
     mock_send_image_by_email: mock.MagicMock) -> None:
