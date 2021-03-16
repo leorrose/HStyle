@@ -20,4 +20,4 @@ jobs:
         pip install -r ./app/server/requirements.txt
     - name: Analysing the code with pylint
       run: |
-        pylint ./app/server
+        pylint ./app/server --rcfile=./app/server/.pylintrc
