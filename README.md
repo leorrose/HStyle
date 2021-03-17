@@ -1,6 +1,5 @@
 ![Pylint badge](https://github.com/leorrose/HStyle/workflows/Pylint/badge.svg)
 ![Coverage badge](https://github.com/leorrose/HStyle/workflows/Coverage/badge.svg)
-![Coverage badge](https://github.com/leorrose/HStyle/workflows/Pytest/badge.svg)
 
 # Hstyle
 
