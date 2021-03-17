@@ -23,4 +23,4 @@ jobs:
     - name: Run code coverage
       working-directory: ./app/server
       run: |
-        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
