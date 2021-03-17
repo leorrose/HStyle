@@ -1,4 +1,4 @@
-name: Coverage
+name: Coverage and Tests
 
 on: [push]
 
@@ -17,7 +17,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r ./app/server/requirements.txt
-    - name: Run code coverage
+    - name: Run code coverage and Tests
       working-directory: ./app/server
       run: |
         coverage run -m pytest
