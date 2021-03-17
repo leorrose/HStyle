@@ -1,4 +1,4 @@
-name: Coverage and Tests
+name: Coverage_and_Tests
 
 on: [push]
 
