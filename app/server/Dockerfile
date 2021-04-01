@@ -18,7 +18,7 @@ RUN apt-get install python3.8 -y
 RUN python3.8 -m pip install --upgrade pip
 
 # install dependencies
-RUN python3.8 -m pip install -r requirements.txt
+RUN python3.8 -m pip install -r server/requirements.txt
 
 # command to run on container start
 CMD [ "python3.8", "-m", "uvicorn", "server.controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]
