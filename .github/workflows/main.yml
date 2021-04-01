@@ -1,0 +1,22 @@
+name: Client side linting
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        working-directory: ./app/client
+        run: |
+          npm install
+          npm install -g @angular/cli@11.2.2
+      - name: Run code coverage
+        working-directory: ./app/client
+        run: |
+          ng lint
