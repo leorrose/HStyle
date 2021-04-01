@@ -1,4 +1,4 @@
-name: Client side linting
+name: Client_side_linting
 
 on: [push]
 

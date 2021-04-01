@@ -1,4 +1,4 @@
-name: Client side coverage
+name: Client_side_coverage
 
 on: [push]
 

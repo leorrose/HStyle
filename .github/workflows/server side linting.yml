@@ -1,4 +1,4 @@
-name: Server side linting
+name: Server_side_linting
 
 on: [push]
 
