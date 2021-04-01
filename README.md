@@ -35,10 +35,10 @@ In order to run this project with docker your environment  needs to support  Ten
 6. Open this link http://PRODUCTION_IP_ADDRESS:3000/ where PRODUCTION_IP_ADDRESS is your deployment server IP address.
 7. Enjoy the application.
 
-## Demo:
+## Demo
 
 
-## Examples:
+## Examples
 | Content Image                   | Style Image                     | Changes To Content Image| Result             |
 |:-------------------------------:|:-------------------------------:|:----------:|:-------------------------------:|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
