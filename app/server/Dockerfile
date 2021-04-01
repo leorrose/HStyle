@@ -11,11 +11,18 @@ COPY . .
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 
+# get python 3.8
+RUN sudo apt update
+RUN sudo apt install software-properties-common
+RUN sudo apt install software-properties-common
+RUN sudo add-apt-repository ppa:deadsnakes/ppa -y
+RUN sudo apt install python3.8
+
 # update pip
-RUN python3 -m pip install --upgrade pip
+RUN python3.8 -m pip install --upgrade pip
 
 # install dependencies
-RUN python3 -m pip install -r requirements.txt
+RUN python3.8 -m pip install -r requirements.txt
 
 # command to run on container start
-CMD [ "uvicorn", "controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]
+CMD [ "python3.8", "-m" "uvicorn", "controllers.main:app", "--port", "5000", "--host", "0.0.0.0"]
