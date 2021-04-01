@@ -15,7 +15,8 @@ jobs:
         working-directory: ./app/client
         run: |
           npm install
+          npm install -g @angular/cli@11.2.2
       - name: Run code coverage
         working-directory: ./app/client
         run: |
-          npm run test --watch=false --code-coverage --browsers=ChromeHeadless
+          ng test --watch=false --code-coverage --browsers=ChromeHeadless
