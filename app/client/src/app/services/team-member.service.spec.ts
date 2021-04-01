@@ -15,7 +15,7 @@ describe('TeamMemberServiceService', () => {
     });
 
     it('should return team member array', () => {
-        let teamMembers = service.getTeamMembers();
+        const teamMembers = service.getTeamMembers();
         expect(teamMembers.length).toEqual(3);
     });
 });

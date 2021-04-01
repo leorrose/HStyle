@@ -1,20 +1,25 @@
+import { SingleImageUploaderComponent } from './../single-image-uploader/single-image-uploader.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule} from '@angular/common/http/testing';
 import { HistoricalStyleGeneratorComponent } from './historical-style-generator.component';
 import { RestApiService } from '../services/rest-api.service';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('HistoricalStyleGeneratorComponent', () => {
     let component: HistoricalStyleGeneratorComponent;
     let fixture: ComponentFixture<HistoricalStyleGeneratorComponent>;
-    let RestApiServiceMock = jasmine.createSpyObj('RestApiService', ['generateImage']);
+    const RestApiServiceMock = jasmine.createSpyObj('RestApiService', ['generateImage']);
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [HistoricalStyleGeneratorComponent],
+            declarations: [
+                HistoricalStyleGeneratorComponent
+            ],
             providers: [
                 { provide: RestApiService, useValue: RestApiServiceMock}
             ],
-            imports: [ HttpClientTestingModule ]
+            imports: [ HttpClientTestingModule ],
+            schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
     });
 
@@ -24,20 +29,25 @@ describe('HistoricalStyleGeneratorComponent', () => {
         fixture.detectChanges();
     });
 
+    afterEach(() => {
+        RestApiServiceMock.generateImage.calls.reset();
+
+    });
+
     it('should create', () => {
         expect(component).toBeTruthy();
     });
 
     it('should set content image', () => {
-        let test_file = new File([""], "filename", { type: 'text/html' });
-        component.setContentImage(test_file);
-        expect(component.contentImage).toEqual(test_file);
+        const testFile = new File([''], 'filename', { type: 'text/html' });
+        component.setContentImage(testFile);
+        expect(component.contentImage).toEqual(testFile);
     });
 
     it('should set style image', () => {
-        let test_file = new File([""], "filename", { type: 'text/html' });
-        component.setStyleImage(test_file);
-        expect(component.styleImage).toEqual(test_file);
+        const testFile = new File([''], 'filename', { type: 'text/html' });
+        component.setStyleImage(testFile);
+        expect(component.styleImage).toEqual(testFile);
     });
 
     it('should toggle dilation from true to false', () => {
@@ -57,25 +67,25 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('email field validity', () => {
-        let email = component.inputs.controls['email'];
+        const email = component.inputs.get('email');
         expect(email.valid).toBeFalsy();
 
-        email.setValue("");
+        email.setValue('');
         expect(email.hasError('required')).toBeTruthy();
 
-        email.setValue("test");
+        email.setValue('test');
         expect(email.hasError('pattern')).toBeTruthy();
 
-        email.setValue("test@gmail.com");
+        email.setValue('test@gmail.com');
         expect(email.valid).toBeTruthy();
     });
 
     it('styleLoss field validity', () => {
-        let styleLoss = component.inputs.controls['styleLoss'];
+        const styleLoss = component.inputs.get('styleLoss');
         expect(styleLoss.valid).toBeTruthy();
         expect(styleLoss.value).toEqual(0.01);
 
-        styleLoss.setValue("");
+        styleLoss.setValue('');
         expect(styleLoss.hasError('required')).toBeTruthy();
 
         styleLoss.setValue(0.2);
@@ -89,11 +99,11 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('contentLoss field validity', () => {
-        let contentLoss = component.inputs.controls['contentLoss'];
+        const contentLoss = component.inputs.get('contentLoss');
         expect(contentLoss.valid).toBeTruthy();
         expect(contentLoss.value).toEqual(150);
 
-        contentLoss.setValue("");
+        contentLoss.setValue('');
         expect(contentLoss.hasError('required')).toBeTruthy();
 
         contentLoss.setValue(100001);
@@ -107,11 +117,11 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('totalVariationLoss field validity', () => {
-        let totalVariationLoss = component.inputs.controls['totalVariationLoss'];
+        const totalVariationLoss = component.inputs.get('totalVariationLoss');
         expect(totalVariationLoss.valid).toBeTruthy();
         expect(totalVariationLoss.value).toEqual(30);
 
-        totalVariationLoss.setValue("");
+        totalVariationLoss.setValue('');
         expect(totalVariationLoss.hasError('required')).toBeTruthy();
 
         totalVariationLoss.setValue(31);
@@ -125,13 +135,13 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('should generate image with good response', (done) => {
-        let email = component.inputs.controls['email']
-        email.setValue("test@test.com");
-        let styleLoss = component.inputs.controls['styleLoss']
+        const email = component.inputs.get('email');
+        email.setValue('test@test.com');
+        const styleLoss = component.inputs.get('styleLoss');
         styleLoss.setValue(0.01);
-        let contentLoss = component.inputs.controls['contentLoss']
+        const contentLoss = component.inputs.get('contentLoss');
         contentLoss.setValue(150);
-        let totalVariationLoss = component.inputs.controls['totalVariationLoss']
+        const totalVariationLoss = component.inputs.get('totalVariationLoss');
         totalVariationLoss.setValue(30);
         RestApiServiceMock.generateImage.and.returnValue(true);
 
@@ -139,7 +149,7 @@ describe('HistoricalStyleGeneratorComponent', () => {
         component.generateImage().then(() => {
             expect(RestApiServiceMock.generateImage).toHaveBeenCalled();
             expect(component.generateImageMessage).toContain('The process will');
-            expect(email.value).toEqual("");
+            expect(email.value).toEqual('');
             expect(styleLoss.value).toEqual(0.01);
             expect(contentLoss.value).toEqual(150);
             expect(totalVariationLoss.value).toEqual(30);
@@ -151,13 +161,13 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('should generate image with bad response', (done) => {
-        let email = component.inputs.controls['email']
-        email.setValue("test@test.com");
-        let styleLoss = component.inputs.controls['styleLoss']
+        const email = component.inputs.get('email');
+        email.setValue('test@test.com');
+        const styleLoss = component.inputs.get('styleLoss');
         styleLoss.setValue(0.01);
-        let contentLoss = component.inputs.controls['contentLoss']
+        const contentLoss = component.inputs.get('contentLoss');
         contentLoss.setValue(150);
-        let totalVariationLoss = component.inputs.controls['totalVariationLoss']
+        const totalVariationLoss = component.inputs.get('totalVariationLoss');
         totalVariationLoss.setValue(30);
         RestApiServiceMock.generateImage.and.returnValue(false);
 
@@ -165,7 +175,7 @@ describe('HistoricalStyleGeneratorComponent', () => {
         component.generateImage().then(() => {
             expect(RestApiServiceMock.generateImage).toHaveBeenCalled();
             expect(component.generateImageMessage).toContain('A problem occurred');
-            expect(email.value).toEqual("");
+            expect(email.value).toEqual('');
             expect(styleLoss.value).toEqual(0.01);
             expect(contentLoss.value).toEqual(150);
             expect(totalVariationLoss.value).toEqual(30);
@@ -177,8 +187,7 @@ describe('HistoricalStyleGeneratorComponent', () => {
     });
 
     it('should not generate image', (done) => {
-        let email = component.inputs.controls['email']
-        email.setValue("");
+        expect(component.inputs.valid).toBeFalsy();
         component.generateImage().then(() => {
             expect(RestApiServiceMock.generateImage).not.toHaveBeenCalled();
             done();

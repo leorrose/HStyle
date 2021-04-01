@@ -2,19 +2,21 @@ import { TeamMember } from './../models/team-member';
 import { TeamMembersComponent } from './../team-members/team-members.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TeamMemberCardComponent } from './team-member-card.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('TeamMemberCardComponent', () => {
     let component: TeamMemberCardComponent;
     let fixture: ComponentFixture<TeamMemberCardComponent>;
-    let teamMemberMock: TeamMember = { name: 'test', imagePath: 'test',
+    const teamMemberMock: TeamMember = { name: 'test', imagePath: 'test',
                                        description: `test`, researchgateLink: 'test',
                                        linkedinLink: 'test', githubLink: 'test',
                                        emailAddress: 'test'
-    }
+    };
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TeamMemberCardComponent, TeamMembersComponent]
+            declarations: [TeamMemberCardComponent],
+            schemas: [NO_ERRORS_SCHEMA]
         })
             .compileComponents();
     });
@@ -22,7 +24,7 @@ describe('TeamMemberCardComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(TeamMemberCardComponent);
         component = fixture.componentInstance;
-        component.teamMember = teamMemberMock
+        component.teamMember = teamMemberMock;
         fixture.detectChanges();
     });
 

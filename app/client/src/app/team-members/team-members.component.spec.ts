@@ -1,18 +1,24 @@
+import { TeamMemberCardComponent } from './../team-member-card/team-member-card.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TeamMembersComponent } from './team-members.component';
 import { TeamMemberService } from '../services/team-member.service';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('TeamMembersComponent', () => {
     let component: TeamMembersComponent;
     let fixture: ComponentFixture<TeamMembersComponent>;
-    let TeamMemberServiceMock: any = jasmine.createSpyObj('teamMemberService', ['getTeamMembers']);
+    const TeamMemberServiceMock: any = jasmine.createSpyObj('teamMemberService', ['getTeamMembers']);
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TeamMembersComponent],
+            declarations: [
+                TeamMembersComponent,
+                TeamMemberCardComponent
+            ],
             providers: [
                 { provide: TeamMemberService, useValue: TeamMemberServiceMock}
             ],
+            schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
     });
 
@@ -22,7 +28,7 @@ describe('TeamMembersComponent', () => {
         fixture.detectChanges();
 
         // mock
-        TeamMemberServiceMock.getTeamMembers.and.returnValue([])
+        TeamMemberServiceMock.getTeamMembers.and.returnValue([]);
     });
 
     it('should create', () => {

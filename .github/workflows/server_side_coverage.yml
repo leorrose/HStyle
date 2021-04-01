@@ -1,4 +1,4 @@
-name: Coverage
+name: Server side coverage
 
 on: [push]
 
