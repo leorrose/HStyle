@@ -4,7 +4,6 @@ astroid==2.5
 astunparse==1.6.3
 atomicwrites==1.4.0
 attrs==20.3.0
-autopep8==1.5.5
 cachetools==4.2.1
 certifi==2020.12.5
 chardet==4.0.0
@@ -37,13 +36,12 @@ opencv-python==4.5.1.48
 opt-einsum==3.3.0
 packaging==20.9
 pandas==1.2.3
-Pillow==8.1.1
+Pillow==8.1.0
 pluggy==0.13.1
 protobuf==3.14.0
 py==1.10.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycodestyle==2.6.0
 pydantic==1.7.3
 pylint==2.7.1
 pyparsing==2.4.7

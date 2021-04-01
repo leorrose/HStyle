@@ -11,6 +11,8 @@ COPY . .
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 
+# update pip
+RUN python -m pip install --upgrade pip
 
 # install dependencies
 RUN python -m pip install -r requirements.txt
