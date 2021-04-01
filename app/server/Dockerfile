@@ -10,9 +10,9 @@ COPY . .
 # install missing libraries
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
-RUN apt install software-properties-common
+RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa -y
-RUN apt install python3.8
+RUN apt-get install python3.8
 
 # update pip
 RUN python3.8 -m pip install --upgrade pip
