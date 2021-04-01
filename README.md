@@ -1,7 +1,7 @@
-![Server side linting badge](https://github.com/leorrose/HStyle/workflows/Server_side_linting/badge.svg)
-![Server side coverage badge](https://github.com/leorrose/HStyle/workflows/Server_side_coverage/badge.svg)
-![Client side linting badge](https://github.com/leorrose/HStyle/workflows/Client_side_linting/badge.svg)
-![Client side coverage badge](https://github.com/leorrose/HStyle/workflows/Client_side_coverage/badge.svg)
+![Angular linting badge]('https://github.com/leorrose/HStyle/workflows/Server_side_linting/badge.svg')
+![Angular coverage badge]('https://github.com/leorrose/HStyle/workflows/Server_side_coverage/badge.svg')
+![Python linting badge]('https://github.com/leorrose/HStyle/workflows/Client_side_linting/badge.svg')
+![Python coverage badge]('https://github.com/leorrose/HStyle/workflows/Client_side_coverage/badge.svg')
 
 # Hstyle
 
