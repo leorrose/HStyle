@@ -91,10 +91,10 @@ export class HistoricalStyleGeneratorComponent implements OnInit {
         if (response){
             this.generateImageMessage = `The process will take a few minutes. We will send the result
              to the given email address, please check your inbox`;
-             this.inputs.reset();
+             this.inputs.reset({email:'', styleLoss:0.01, contentLoss:150, totalVariationLoss:30})
         }
         else{
-            this.generateImageMessage = 'A problem occured will trying to generate image please check the given inputs and try again.';
+            this.generateImageMessage = 'A problem occurred will trying to generate image please check the given inputs and try again.';
             this.inputs.reset({email:'', styleLoss:0.01, contentLoss:150, totalVariationLoss:30})
         }
     }

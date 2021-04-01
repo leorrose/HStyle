@@ -91,7 +91,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "codeCoverageExclude": ["src/app/single-image-uploader/**", "src/app/team-member-card/**", "src/app/services/rest-api.service.ts"]
           }
         },
         "lint": {

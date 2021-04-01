@@ -25,22 +25,26 @@ export class TeamMembersComponent implements OnInit {
      * @returns array of chunks (arrays of team members)
      */
     chunkArray(array: TeamMember[], size: number): Array<TeamMember[]> {
-        const result = [];
-        // create copy to not change original
-        const arrayCopy = [...array];
+        // test array isn't empty
+        if (array && array.length > 0){
+            const result = [];
+            // create copy to not change original
+            const arrayCopy = [...array];
 
-        // split array into chunks of same size
-        while (arrayCopy.length > 0) {
-            result.push(arrayCopy.splice(0, size));
-        }
-
-        // if last chunk is not size we push empty objects
-        if (result[result.length - 1].length !== size) {
-            const toAdd = size - result[result.length - 1].length;
-            for (let i = 0; i < toAdd; i++) {
-                result[result.length - 1].push({});
+            // split array into chunks of same size
+            while (arrayCopy.length > 0) {
+                result.push(arrayCopy.splice(0, size));
             }
+
+            // if last chunk is not size we push empty objects
+            if (result[result.length - 1].length !== size) {
+                const toAdd = size - result[result.length - 1].length;
+                for (let i = 0; i < toAdd; i++) {
+                    result[result.length - 1].push({});
+                }
+            }
+            return result;
         }
-        return result;
+        return [];
     }
 }

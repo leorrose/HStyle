@@ -13,4 +13,9 @@ describe('TeamMemberServiceService', () => {
     it('should be created', () => {
         expect(service).toBeTruthy();
     });
+
+    it('should return team member array', () => {
+        let teamMembers = service.getTeamMembers();
+        expect(teamMembers.length).toEqual(3);
+    });
 });

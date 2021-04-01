@@ -13,4 +13,11 @@ describe('DemoService', () => {
     it('should be created', () => {
         expect(service).toBeTruthy();
     });
+
+    it('should return DemoImagesPaths object', () => {
+        let demoImagesPaths = service.getDemoImagesPaths();
+        expect(demoImagesPaths.contentImage).toEqual('assets/hstyle_demo/content.webp');
+        expect(demoImagesPaths.styleImage).toEqual('assets/hstyle_demo/style.webp');
+        expect(demoImagesPaths.resultImage).toEqual('assets/hstyle_demo/result.webp');
+    });
 });
