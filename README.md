@@ -1,5 +1,7 @@
-![Pylint badge](https://github.com/leorrose/HStyle/workflows/Pylint/badge.svg)
-![Coverage badge](https://github.com/leorrose/HStyle/workflows/Coverage/badge.svg)
+![Server side linting badge](https://github.com/leorrose/HStyle/workflows/Server_side_linting/badge.svg)
+![Server side coverage badge](https://github.com/leorrose/HStyle/workflows/Server_side_coverage/badge.svg)
+![Client side linting badge](https://github.com/leorrose/HStyle/workflows/Client_side_linting/badge.svg)
+![Client side coverage badge](https://github.com/leorrose/HStyle/workflows/Client_side_coverage/badge.svg)
 
 # Hstyle
 
