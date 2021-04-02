@@ -39,7 +39,7 @@ In order to run this project with docker your environment  needs to support  Ten
 
 
 ## Examples
-| Content Image                   | Style Image                     | Changes To Content Image| Result             |
+| Content Image                   | Style Image                     | Changes Applied To Content Image| Result             |
 |:-------------------------------:|:-------------------------------:|:----------:|:-------------------------------:|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
@@ -51,6 +51,12 @@ In order to run this project with docker your environment  needs to support  Ten
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/8/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/8/style.jpg)|Apply dilation and binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/8/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/9/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/10/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/11/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/12/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/13/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value + Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/14/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/15/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/16/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
 
 ## Citations
 
