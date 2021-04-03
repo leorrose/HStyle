@@ -1,5 +1,5 @@
 import { RestApiService } from './../services/rest-api.service';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { StyleTransferRequest } from '../models/style-transfer-request';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -13,6 +13,7 @@ export class HistoricalStyleGeneratorComponent implements OnInit {
     styleImage: File = null;
     addDilation = true;
     generateImageMessage = '';
+    enableImageUploader = true;
 
     // form validators
     inputs = new FormGroup({
@@ -37,7 +38,7 @@ export class HistoricalStyleGeneratorComponent implements OnInit {
         ]),
     });
 
-    constructor(private restApiService: RestApiService) {
+    constructor(private restApiService: RestApiService, private changeDetector: ChangeDetectorRef) {
 
 
     }
@@ -92,10 +93,16 @@ export class HistoricalStyleGeneratorComponent implements OnInit {
             this.generateImageMessage = `The process will take a few minutes. We will send the result
             to the given email address, please check your inbox`;
             this.inputs.reset({email: '', styleLoss: 0.01, contentLoss: 150, totalVariationLoss: 30});
+            this.enableImageUploader = false;
+            this.changeDetector.detectChanges();
+            this.enableImageUploader = true;
         }
         else{
             this.generateImageMessage = 'A problem occurred will trying to generate image please check the given inputs and try again.';
             this.inputs.reset({email: '', styleLoss: 0.01, contentLoss: 150, totalVariationLoss: 30});
+            this.enableImageUploader = false;
+            this.changeDetector.detectChanges();
+            this.enableImageUploader = true;
         }
     }
 

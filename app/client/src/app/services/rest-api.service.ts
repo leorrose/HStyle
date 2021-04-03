@@ -26,7 +26,7 @@ export class RestApiService {
             formData.append('content_image', data.contentImage);
         }
         if (data.styleImage){
-            formData.append('content_image', data.styleImage);
+            formData.append('style_image', data.styleImage);
         }
         const url = environment.API_URL + '/api/styleTransfer/renderImage/';
 

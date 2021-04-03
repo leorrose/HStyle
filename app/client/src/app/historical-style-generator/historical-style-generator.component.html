@@ -108,7 +108,7 @@
             <!-- content image input -->
             <div class="row d-flex flex-row justify-content-center">
                 <div class="col-lg-7">
-                    <app-single-image-uploader (imageContent)="setContentImage($event)" dropZoneText="Drop Image">
+                    <app-single-image-uploader *ngIf="enableImageUploader" (imageContent)="setContentImage($event)" dropZoneText="Drop Image" >
                     </app-single-image-uploader>
                 </div>
             </div>
@@ -126,7 +126,7 @@
             <!-- Style image input -->
             <div class="row d-flex flex-row justify-content-center">
                 <div class="col-lg-7">
-                    <app-single-image-uploader (imageContent)="setStyleImage($event)" dropZoneText="Drop Image">
+                    <app-single-image-uploader *ngIf="enableImageUploader" (imageContent)="setStyleImage($event)" dropZoneText="Drop Image">
                     </app-single-image-uploader>
                 </div>
             </div>
