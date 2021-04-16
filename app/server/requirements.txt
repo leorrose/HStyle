@@ -61,7 +61,7 @@ tensorflow-estimator==2.4.0
 termcolor==1.1.0
 toml==0.10.2
 typing-extensions==3.7.4.3
-urllib3==1.26.3
+urllib3==1.26.4
 uvicorn==0.13.3
 virtualenv==20.4.2
 Werkzeug==1.0.1
