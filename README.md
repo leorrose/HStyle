@@ -58,39 +58,3 @@ In order to run this project with docker your environment  needs to support  Ten
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/14/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/15/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/16/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
-
-## Citations
-
-```
-@inproceedings{inproceedings,
-author = {Simistira, Fotini and Seuret, Mathias and Eichenberger, Nicole and Garz, Angelika and Liwicki, Marcus and Ingold, Rolf},
-year = {2016},
-month = {10},
-pages = {471-476},
-title = {DIVA-HisDB: A Precisely Annotated Large Dataset of Challenging Medieval Manuscripts},
-doi = {10.1109/ICFHR.2016.0093}
-}
-
-@article{article,
-author = {Marti, Urs-Viktor and Bunke, H.},
-year = {2002},
-month = {11},
-pages = {39-46},
-title = {The IAM-database: An English sentence database for offline handwriting recognition},
-volume = {5},
-journal = {International Journal on Document Analysis and Recognition},
-doi = {10.1007/s100320200071}
-}
-
-@article{article,
-author = {Mahmoud, Sabri and Ahmad, Irfan and Al-Khatib, Wasfi and Alshayeb, Mohammad and Parvez, Mohammad and Märgner, Volker and Fink, Gernot},
-year = {2014},
-month = {03},
-pages = {1096–1112},
-title = {KHATT: An open Arabic offline handwritten text database},
-volume = {47},
-journal = {Pattern Recognition},
-doi = {10.1109/ICFHR.2012.224}
-}
-
-```
