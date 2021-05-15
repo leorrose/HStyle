@@ -5,16 +5,27 @@
 
 # Hstyle
 
-A historical style generator (historical style document synthesis).
+Historical documents can reveal a great deal of information about our past, such as, form of writing, 
+wording, content that did not exist and more. In order to perform computational learning (Machine Learning) 
+a huge amount of classified data (Classified Data) is needed. The process of creating classified data 
+(Annotations) is expensive and tedious work, and therefore in the field of historical documents, 
+the databases that exist for training models are small. These datasets do not allow training deep 
+models to get high results.
 
-HStyle lets users synthesize a historical document. What does this mean? Given two documents, one is a historical document (the style), and the other is a modern document (the content), HStyle will transfer the style from the historical document to the modern document. This application is based on a neural style transfer and computer vision techniques.
+In order to create a large database of data, in an easy way that requires less resources, it is necessary 
+to create synthetic data. In the this project, we researched a method for creating synthetic 
+historical data and developed a system (website) that allows each user to synthesize documents himself.
+
+Our method is a deep learning method based on neural style transfer. In order to improve 
+the results of the method, we used several techniques of computer vision, such as Binarization, 
+Dilation and Image Processing.
 
 This Project was created with **Python, FastAPI, TensorFlow, Keras, OpenCV, Angular, Bootstrap and more liberais**. 
 
 ## Project Research
 
-In order to understand the steps and what we did you are welcome to look at the [**Research Jupyter Notebook**](https://github.com/leorrose/HStyle/blob/master/research/research_HStyle.ipynb)
-and the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/research/Project_Book.pdf).
+In order to understand the steps and what we did you are welcome to look at 
+the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/research/Project_Book.pdf).
 
 ## Project Setup and Run
 In order to run this project with docker your environment  needs to support  TensorFlow Docker. you can follow this [**link**](https://www.tensorflow.org/install/docker) to get everything set settled.
