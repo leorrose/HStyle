@@ -53,8 +53,8 @@ In order to run this project with docker your environment  needs to support  Ten
 ## Examples
 | Content Image                   | Style Image                     | Changes Applied To Content Image| Result             |
 |:-------------------------------:|:-------------------------------:|:----------:|:-------------------------------:|
-| ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
-| ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)|Original|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)|Original|![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/3/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/3/style.jpg)|Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/3/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/4/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/4/style.jpg)|Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/4/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/5/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/5/style.jpg)|Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/5/result.png)|
