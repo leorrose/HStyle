@@ -74,11 +74,13 @@ In order to run this project with docker your environment  needs to support  Ten
 In order to evaluate and determine which technique is best from 3 techniques we thought have the best results (Original content image, Dilate content image, Binary content image), we performed a survey of 50 participants and asked them to rate image readability and image historical look, 1-being the lowest (poor), 5-being the highest (great).
 
 **Result for image historical look**
+
 ![Historical Image Readability](https://github.com/leorrose/HStyle/blob/master/documentation/Historical%20Image%20Readability.png)
 
 As we can see, ‘dilate content image’ and ‘binary content image’ get the highest amount of votes for rate three and above, meaning, these results have the highest readability.
 
 **Result for image historical look**
+
 ![Image Historical Look](https://github.com/leorrose/HStyle/blob/master/documentation/Image%20Historical%20Look.png)
 
 As we can see, ‘dilate content image’ gets the highest amount of votes for rate three and above, meaning, these results have the most historical look.
