@@ -75,9 +75,11 @@ In order to evaluate and determine which technique is best from 3 techniques we 
 
 **Result for image historical look**
 ![Historical Image Readability](https://github.com/leorrose/HStyle/blob/master/documentation/Historical%20Image%20Readability.png)
+
 As we can see, ‘dilate content image’ and ‘binary content image’ get the highest amount of votes for rate three and above, meaning, these results have the highest readability.
 
 **Result for image historical look**
 ![Image Historical Look](https://github.com/leorrose/HStyle/blob/master/documentation/Image%20Historical%20Look.png)
+
 As we can see, ‘dilate content image’ gets the highest amount of votes for rate three and above, meaning, these results have the most historical look.
 
