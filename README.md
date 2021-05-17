@@ -20,7 +20,7 @@ Our method is a deep learning method based on neural style transfer. In order to
 the results of the method, we used several techniques of computer vision, such as Binarization, 
 Dilation and Image Processing.
 
-This Project was created with **Python, FastAPI, TensorFlow, Keras, OpenCV, Angular, Bootstrap and more libraries**. 
+This Project was created with **Python, FastAPI, TensorFlow, Keras, OpenCV, Angular, Bootstrap and more libraries**.
 
 ## Project Research
 
