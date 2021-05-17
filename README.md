@@ -53,8 +53,8 @@ In order to run this project with docker your environment  needs to support  Ten
 ## Examples
 | Content Image                   | Style Image                     | Changes Applied To Content Image| Result             |
 |:-------------------------------:|:-------------------------------:|:----------:|:-------------------------------:|
-| ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
-| ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)||![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/1/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/1/style.jpg)|Original|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
+| ![content](https://github.com/leorrose/HStyle/blob/master/examples/2/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/2/style.jpg)|Original|![result](https://github.com/leorrose/HStyle/blob/master/examples/2/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/3/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/3/style.jpg)|Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/3/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/4/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/4/style.jpg)|Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/4/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/5/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/5/style.jpg)|Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/5/result.png)|
@@ -69,3 +69,19 @@ In order to run this project with docker your environment  needs to support  Ten
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/14/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/15/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/9/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/1/result.png)|
 | ![content](https://github.com/leorrose/HStyle/blob/master/examples/16/content.png)|![style](https://github.com/leorrose/HStyle/blob/master//examples/10/style.jpg)|Replace white background with style average pixel value + Apply binarization + Apply dilation|![result](https://github.com/leorrose/HStyle/blob/master/examples/10/result.png)|
+
+## Evaluation
+In order to evaluate and determine which technique is best from 3 techniques, which we thought have the best results (Original content image, Dilate content image, Binary content image), we performed a survey of 50 participants and asked them to rate image readability and image historical look, 1-being the lowest (poor) and 5-being the highest (great).
+
+### Result for image historical look
+
+![Historical Image Readability](https://github.com/leorrose/HStyle/blob/master/documentation/Historical%20Image%20Readability.png)
+
+As we can see, ‘dilate content image’ and ‘binary content image’ get the highest amount of votes for rate three and above, meaning, these results have the highest readability.
+
+###  Result for image historical look
+
+![Image Historical Look](https://github.com/leorrose/HStyle/blob/master/documentation/Image%20Historical%20Look.png)
+
+As we can see, ‘dilate content image’ gets the highest amount of votes for rate three and above, meaning, these results have the most historical look.
+
