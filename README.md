@@ -25,7 +25,7 @@ This Project was created with **Python, FastAPI, TensorFlow, Keras, OpenCV, Angu
 ## Project Research
 
 In order to understand the steps and what we did you are welcome to look at 
-the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/research/Project_Book.pdf).
+the [**Project Book**](https://github.com/leorrose/HStyle/blob/master/documentation/Project_Book.pdf).
 
 ## Project Setup and Run
 In order to run this project with docker your environment  needs to support  TensorFlow Docker. you can follow this [**link**](https://www.tensorflow.org/install/docker) to get everything set settled.
